@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-07 11:22:01.020391",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "services",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "services",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Services",
+   "options": "Item Price"
+  },
+  {
+   "fetch_from": "services.price_list_rate",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-07 11:45:00.856886",
+ "modified_by": "Administrator",
+ "module": "Ride Management",
+ "name": "Ride Add On",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
