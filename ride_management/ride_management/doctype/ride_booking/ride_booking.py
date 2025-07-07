@@ -6,10 +6,7 @@ from frappe.model.document import Document
 
 
 class RideBooking(Document):
-	def on_save(Document):
-		services_val = []
-		for i in Document.services:
-			services_val.append(i)
-			
-		total_amount = price_per_km * estimated_km + sum(services_val)
-		
+	def on_save(self):
+		services_val = [i.amount for i in self.services]
+		total_amount = (self.price_per_km * self.estimated_km) + sum(services_val)
+		self.total_amount = total_amount
